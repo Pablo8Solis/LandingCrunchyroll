@@ -10,6 +10,10 @@
     <meta name="robots" content="index, follow">
     <meta name="keywords"
         content="anime, streaming anime, Crunchyroll, ver anime online, simulcast, estrenos anime, anime subtitulado, anime doblado, anime gratis, Crunchyroll Premium">
+    <meta name="author" content="Crunchyroll, LLC">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.crunchyroll.com">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Crunchyroll – Anime en Streaming: Estrenos, Simulcast y Catálogo Completo">
@@ -17,70 +21,106 @@
         content="Disfruta del mejor anime en Crunchyroll. Estrenos simulcast desde Japón, catálogo completo, sin anuncios con Premium. ¡Prueba un mes gratis!">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.crunchyroll.com">
-    <meta property="og:image" content="./img/hero.jpg">
+    <meta property="og:image" content="https://www.crunchyroll.com/img/hero.jpg">
     <meta property="og:image:alt" content="Crunchyroll - El universo anime más grande, directo a tu pantalla">
     <meta property="og:locale" content="es_ES">
     <meta property="og:site_name" content="Crunchyroll">
 
-    <link rel="stylesheet" href="styles.css">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Crunchyroll – Anime en Streaming: Estrenos, Simulcast y Catálogo Completo">
+    <meta name="twitter:description"
+        content="Disfruta del mejor anime en Crunchyroll. Más de 1,000 títulos, estrenos simulcast desde Japón y sin anuncios con Premium.">
+    <meta name="twitter:image" content="https://www.crunchyroll.com/img/hero.jpg">
+    <meta name="twitter:image:alt" content="Crunchyroll - El universo anime más grande, directo a tu pantalla">
+
+
+    <link rel="preload" as="image" href="./img/hero.webp" type="image/webp" fetchpriority="high">
+
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Crunchyroll",
+        "url": "https://www.crunchyroll.com",
+        "description": "Disfruta del mejor anime en Crunchyroll. Estrenos simulcast desde Japón, catálogo completo, sin anuncios con Premium.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Crunchyroll, LLC",
+            "url": "https://www.crunchyroll.com",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.crunchyroll.com/img/hero.jpg"
+            }
+        },
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.crunchyroll.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
 </head>
 
 <body class="bg-black">
 
-    <header
-        class="responsive-header relative bg-[url('./img/hero.jpg')] bg-cover bg-center h-screen w-screen flex flex-col justify-start p-40 pt-[10%]">
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent"></div>
+    <header
+        class="responsive-header relative bg-[url('./img/hero.webp')] bg-cover bg-center h-screen w-screen flex flex-col justify-start p-40 pt-[10%]"
+        role="img" aria-label="Imagen de fondo: personajes de anime populares de Crunchyroll">
+
+        <div class="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-transparent" aria-hidden="true"></div>
 
         <h1
             class="responsive-title relative z-10 text-7xl font-[800] text-white w-4xl font-['Noto_Sans'] tracking-tighter">
             El universo
             anime más grande, directo a tu pantalla</h1>
 
-        <p class="relative z-10 text-2xl font-[400] text-white w-2xl font-['Noto_Sans'] tracking-tighter mt-10">Desde
-            los clásicos hasta los estrenos de la temporada, sin esperar ni un día más.</p>
-        <button
-            class="relative z-10 bg-orange-500 text-black px-3.5 py-3 rounded-full mt-4 hover:bg-orange-400 transition-colors cursor-pointer w-70 text-2xl font-bold">Probar
-            un mes gratis</button>
+        <p class="relative z-10 text-2xl font-[400] text-white w-2xl font-['Noto_Sans'] tracking-tighter mt-10">
+            Únete a millones de fans. Más de 1,000 títulos disponibles — desde los clásicos hasta los estrenos de la
+            temporada, sin esperar ni un día más.</p>
+
+        <a href="#planes"
+            class="cta-primary relative z-10 bg-orange-500 text-black px-3.5 py-3 rounded-full mt-4 hover:bg-orange-400 transition-colors cursor-pointer w-70 text-2xl font-bold text-center"
+            aria-label="Empieza tu prueba gratuita de Crunchyroll Premium">Empieza tu prueba GRATIS</a>
 
     </header>
 
-    <main class="bg-black mt-4">
-        <section>
-            <article class=" text-white text-center p-10 flex flex-col justify-center items-center gap-3 mt-3.5">
+    <main id="main-content" class="bg-black mt-4">
+        <section aria-label="Catálogo de animes populares">
+            <article class="text-white text-center p-10 flex flex-col justify-center items-center gap-3 mt-3.5">
                 <h2 class="responsive-heading text-6xl font-bold">Velo antes que nadie</h2>
                 <p class="text-1xl w-xl font-light text-center">Disfruta de temporadas completas de los mejores
-                    animes,
-                    de
-                    simulcast, de
-                    series
-                    exclusivas ¡y mucho
-                    más!</p>
+                    animes, estrenos simulcast directos desde Japón, series exclusivas de Crunchyroll Originals ¡y mucho
+                    más! Todo en un solo lugar, con subtítulos y doblaje en español.</p>
             </article>
 
-            <div class="parent px-10" id="animes-container">
+            <div class="parent px-10" id="animes-container" role="list" aria-label="Lista de animes disponibles">
 
             </div>
 
-            <article class="text-white text-center p-10 flex flex-col justify-center items-center gap-3 mt-3.5">
+            <article class="text-white text-center p-10 flex flex-col justify-center items-center gap-3 mt-3.5"
+                id="planes">
                 <h2 class="responsive-heading text-6xl font-bold">Consigue más con <span
                         class="text-orange-500">Premium</span></h2>
-                <p class="text-1xl w-xl font-light text-center">Disfruta de temporadas completas de los mejores
-                    animes,
-                    de
-                    simulcast, de
-                    series
-                    exclusivas ¡y mucho
-                    más!</p>
+                <p class="text-1xl w-xl font-light text-center">Desbloquea la experiencia completa: maratones sin
+                    interrupciones, estrenos el mismo día que en Japón, y acceso exclusivo a contenido que no
+                    encontrarás en ningún otro lugar. Todo lo que un verdadero fan necesita.</p>
 
                 <div role="list" aria-label="Beneficios de Crunchyroll Premium"
                     class="premium-icons text-white flex justify-center items-center gap-3.5 mt-3.5 text-[14px] p-10 text-center">
-                    <div class="flex justify-center items-center gap-2 flex-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <div class="flex justify-center items-center gap-2 flex-col" role="listitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            aria-hidden="true" focusable="false">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M42.1952 17.3867L16.9396 27.881C15.6106 28.4333 14.8255 29.8168 15.0331 31.241C15.2406 32.6651 16.3879 33.767 17.8193 33.917L21.9762 34.3525L42.1952 17.3867ZM27.5083 34.9321L45.799 36.8484C46.5044 36.9223 47.0906 36.3119 46.9884 35.6101L44.7778 20.4413L27.5083 34.9321ZM28.4999 48.2463L24.9398 37.2101L28.7374 37.6079C29.1655 37.6528 29.5268 37.9459 29.659 38.3556L32.6341 47.5786C32.8607 48.2808 32.337 48.9998 31.5993 48.9998H29.5348C29.0628 48.9998 28.6448 48.6954 28.4999 48.2463Z"
                                 fill="#ECE1C2"></path>
@@ -93,8 +133,9 @@
                         <p>Sin anuncios</p>
 
                     </div>
-                    <div class="flex justify-center items-center gap-2 flex-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <div class="flex justify-center items-center gap-2 flex-col" role="listitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            aria-hidden="true" focusable="false">
                             <rect x="9" y="28" width="46" height="28" stroke="#ECE1C2" stroke-width="4"></rect>
                             <path d="M28.5996 35.1992L39.2663 41.8659L28.5996 48.5326V35.1992Z" fill="#ECE1C2"></path>
                             <rect x="11" y="16" width="42" height="4" fill="#ECE1C2"></rect>
@@ -104,11 +145,12 @@
                             <rect x="15" y="10" width="4" height="2" fill="#ECE1C2"></rect>
                             <rect x="45" y="10" width="4" height="2" fill="#ECE1C2"></rect>
                         </svg>
-                        <p>Acceso ilimitado al catalogo</p>
+                        <p>Acceso ilimitado al catálogo</p>
 
                     </div>
-                    <div class="flex justify-center items-center gap-2 flex-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <div class="flex justify-center items-center gap-2 flex-col" role="listitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            aria-hidden="true" focusable="false">
                             <path d="M12 14H44.5308C45.0649 14 45.449 14.5133 45.2983 15.0257L37.6 41.2H4"
                                 stroke="#ECE1C2" stroke-width="4" stroke-linecap="round"></path>
                             <path
@@ -124,11 +166,12 @@
                                 stroke-width="0.8"></circle>
                             <path d="M61 50H3" stroke="#ECE1C2" stroke-width="4" stroke-linecap="round"></path>
                         </svg>
-                        <p>Estrenos desde japón</p>
+                        <p>Estrenos desde Japón</p>
 
                     </div>
-                    <div class="flex justify-center items-center gap-2 flex-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <div class="flex justify-center items-center gap-2 flex-col" role="listitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            aria-hidden="true" focusable="false">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M56 20V7H4V45H28V55H16V59H44V55H32V45H39V49H60V20H56ZM52 20V11H8V41H39V20H52ZM56 24H43V45H56V24Z"
                                 fill="#ECE1C2"></path>
@@ -136,8 +179,9 @@
                         <p>6 dispositivos a la vez</p>
 
                     </div>
-                    <div class="flex justify-center items-center gap-2 flex-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <div class="flex justify-center items-center gap-2 flex-col" role="listitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            aria-hidden="true" focusable="false">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M20.9004 15.0996C14.29 15.0996 9.02539 20.2996 9.02539 26.5996V42.5651C9.02539 46.0123 11.9131 48.8996 15.5914 48.8996C17.5198 48.8996 19.3386 48.0826 20.5794 46.6841L20.9653 46.2492C23.2238 43.7037 26.4951 42.2535 29.9218 42.2535H34.079C37.5057 42.2535 40.777 43.7037 43.0355 46.2492L43.4213 46.6841C44.6622 48.0826 46.481 48.8996 48.4094 48.8996C52.0877 48.8996 54.9754 46.0123 54.9754 42.5651V26.5996C54.9754 20.2996 49.7108 15.0996 43.1004 15.0996H20.9004ZM5.02539 26.5996C5.02539 17.9879 12.1849 11.0996 20.9004 11.0996H43.1004C51.8159 11.0996 58.9754 17.9879 58.9754 26.5996V42.5651C58.9754 48.324 54.1928 52.8996 48.4094 52.8996C45.3577 52.8996 42.4428 51.6081 40.4293 49.3388L40.0434 48.9039C38.5575 47.2292 36.3824 46.2535 34.079 46.2535H29.9218C27.6184 46.2535 25.4432 47.2292 23.9574 48.9039L23.5715 49.3388C21.558 51.6081 18.6431 52.8996 15.5914 52.8996C9.80796 52.8996 5.02539 48.324 5.02539 42.5651V26.5996ZM42.7969 23.8996C42.7969 25.3908 41.588 26.5996 40.0969 26.5996C38.6057 26.5996 37.3969 25.3908 37.3969 23.8996C37.3969 22.4085 38.6057 21.1996 40.0969 21.1996C41.588 21.1996 42.7969 22.4085 42.7969 23.8996ZM45.5021 34.6996C46.9933 34.6996 48.2021 33.4908 48.2021 31.9996C48.2021 30.5085 46.9933 29.2997 45.5021 29.2997C44.011 29.2997 42.8021 30.5085 42.8021 31.9996C42.8021 33.4908 44.011 34.6996 45.5021 34.6996ZM21.5 36.9995C20.3954 36.9995 19.5 36.1041 19.5 34.9995V31.4995H16C14.8954 31.4995 14 30.6041 14 29.4995C14 28.3949 14.8954 27.4995 16 27.4995H19.5V23.9995C19.5 22.8949 20.3954 21.9995 21.5 21.9995C22.6046 21.9995 23.5 22.8949 23.5 23.9995V27.4995H27C28.1046 27.4995 29 28.3949 29 29.4995C29 30.6041 28.1046 31.4995 27 31.4995H23.5V34.9995C23.5 36.1041 22.6046 36.9995 21.5 36.9995Z"
                                 fill="#ECE1C2"></path>
@@ -145,8 +189,9 @@
                         <p>Acceso a Crunchyroll Game Vault</p>
 
                     </div>
-                    <div class="flex justify-center items-center gap-2 flex-col">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+                    <div class="flex justify-center items-center gap-2 flex-col" role="listitem">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none"
+                            aria-hidden="true" focusable="false">
                             <path fill-rule="evenodd" clip-rule="evenodd"
                                 d="M46.7189 27.7975L33.9993 38.3972V8H29.9993V38.3973L17.2796 27.7975L14.7189 30.8704L31.9993 45.2707L49.2796 30.8704L46.7189 27.7975ZM31.9226 40L31.9993 40.0639L32.0759 40H31.9226Z"
                                 fill="#ECE1C2"></path>
@@ -156,24 +201,28 @@
 
                     </div>
                 </div>
+
+                <a href="#planes"
+                    class="cta-primary relative z-10 bg-orange-500 text-black px-3.5 py-3 rounded-full mt-4 hover:bg-orange-400 transition-colors cursor-pointer w-70 text-2xl font-bold text-center"
+                    aria-label="Hazte Premium de Crunchyroll y disfruta sin anuncios">Hazte Premium ahora</a>
             </article>
 
             <article class="text-white text-center p-10 flex flex-col justify-center items-center gap-3 mt-3.5">
                 <h2 class="responsive-heading text-6xl font-bold">¿Ya tienes cuenta?</h2>
-                <p class="text-1xl w-xl font-light text-center">Inicia sesión para continuar viendo tus animes
-                    favoritos
-                    y descubre nuevos títulos que te encantarán. ¡No te pierdas ni un solo episodio!</p>
+                <p class="text-1xl w-xl font-light text-center">No te quedes atrás tus animes favoritos te están
+                    esperando con nuevos episodios cada semana. Inicia sesión y retoma donde lo dejaste. ¡Cada minuto
+                    sin ver es un episodio que te pierdes!</p>
 
-                <button
-                    class="relative z-10 bg-orange-500 text-black px-3.5 py-3 rounded-full mt-4 hover:bg-orange-400 transition-colors cursor-pointer w-70 text-2xl font-bold">Iniciar
-                    sesión</button>
+                <a href="#"
+                    class="cta-secondary relative z-10 bg-orange-500 text-black px-3.5 py-3 rounded-full mt-4 hover:bg-orange-400 transition-colors cursor-pointer w-70 text-2xl font-bold text-center"
+                    rel="noopener noreferrer" aria-label="Iniciar sesión en Crunchyroll">Iniciar sesión</a>
             </article>
 
         </section>
     </main>
 
 
-    <footer class="mt-4">
+    <footer class="mt-4" role="contentinfo">
         <div class="footer-content bg-zinc-900 text-white p-10 flex justify-between items-center">
             <p class="text-2xl font-semibold">© 2026 Crunchyroll, LLC</p>
             <nav aria-label="Enlaces legales del pie de página">
@@ -195,7 +244,7 @@
         </div>
     </footer>
 
-    <script>
+    <script defer>
         const Animes = [
             {
                 imagen: "./img/jjtk2.png",
@@ -243,7 +292,7 @@
             },
             {
                 imagen: "./img/onepiece.png",
-                titulo: "One piece",
+                titulo: "One Piece",
                 descripcion: "Sub|Dob"
             },
             {
@@ -293,13 +342,20 @@
         const container = document.getElementById('animes-container');
 
         container.innerHTML = Animes.map((anime, index) => `
-                <article class="div${index + 1} text-white flex flex-col items-start w-40">
-                    <img src="${anime.imagen}" alt="Portada del anime ${anime.titulo} disponible en Crunchyroll" class="rounded-lg w-full object-cover" loading="lazy" />
+                <article class="div${index + 1} text-white flex flex-col items-start w-40" role="listitem">
+                    <img src="${anime.imagen}"
+                         alt="Portada del anime ${anime.titulo} disponible en Crunchyroll"
+                         class="rounded-lg w-full object-cover anime-card-img"
+                         loading="lazy"
+                         decoding="async"
+                         width="160"
+                         height="220" />
                     <h3 class="text-lg font-bold">${anime.titulo}</h3>
                     <p class="text-sm font-light text-start">${anime.descripcion}</p>
                 </article>
         `).join('');
     </script>
+
 
 </body>
 

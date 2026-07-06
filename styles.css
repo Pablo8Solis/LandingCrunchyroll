@@ -307,6 +307,9 @@
   .bg-\[url\(\'\.\/img\/hero\.jpg\'\)\] {
     background-image: url('./img/hero.jpg');
   }
+  .bg-\[url\(\'\.\/img\/hero\.webp\'\)\] {
+    background-image: url('./img/hero.webp');
+  }
   .from-black {
     --tw-gradient-from: var(--color-black);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -428,6 +431,72 @@
     }
   }
 }
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f97316;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 700;
+  font-size: 1rem;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0;
+  outline: 3px solid #fff;
+  outline-offset: 2px;
+}
+*:focus-visible {
+  outline: 3px solid #f97316;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+.cta-primary {
+  display: inline-block;
+  text-decoration: none;
+  animation: cta-pulse 2.5s ease-in-out infinite;
+  box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5);
+  transition: transform 0.2s ease, background-color 0.15s ease;
+}
+.cta-primary:hover {
+  transform: scale(1.04);
+}
+.cta-primary:active {
+  transform: scale(0.97);
+}
+@keyframes cta-pulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(249, 115, 22, 0.25);
+  }
+}
+.cta-secondary {
+  display: inline-block;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.15s ease;
+}
+.cta-secondary:hover {
+  transform: scale(1.04);
+}
+.cta-secondary:active {
+  transform: scale(0.97);
+}
+.anime-card-img {
+  aspect-ratio: 160 / 220;
+  width: 100%;
+  height: auto;
+  background-color: #1a1a1a;
+}
 .parent {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -487,6 +556,19 @@
   }
   .responsive-heading {
     font-size: 1.5rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cta-primary {
+    animation: none;
+  }
+  .cta-primary:hover, .cta-secondary:hover {
+    transform: none;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 @property --tw-gradient-position {

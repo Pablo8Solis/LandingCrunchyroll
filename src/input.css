@@ -1,5 +1,94 @@
 @import "tailwindcss";
 
+/* ==========================================
+   CUSTOM STYLES — Landing Page Crunchyroll
+   ========================================== */
+
+/* --- Skip Link (Accessibility) --- */
+.skip-link {
+    position: absolute;
+    top: -100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f97316;
+    color: #000;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    z-index: 9999;
+    text-decoration: none;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 0;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* --- Focus Visible (Accessibility — keyboard navigation) --- */
+*:focus-visible {
+    outline: 3px solid #f97316;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Remove focus ring for mouse/touch users */
+*:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* --- CTA Primary Animation (pulse glow) --- */
+.cta-primary {
+    display: inline-block;
+    text-decoration: none;
+    animation: cta-pulse 2.5s ease-in-out infinite;
+    box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5);
+    transition: transform 0.2s ease, background-color 0.15s ease;
+}
+
+.cta-primary:hover {
+    transform: scale(1.04);
+}
+
+.cta-primary:active {
+    transform: scale(0.97);
+}
+
+@keyframes cta-pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px 8px rgba(249, 115, 22, 0.25);
+    }
+}
+
+/* --- CTA Secondary --- */
+.cta-secondary {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease, background-color 0.15s ease;
+}
+
+.cta-secondary:hover {
+    transform: scale(1.04);
+}
+
+.cta-secondary:active {
+    transform: scale(0.97);
+}
+
+/* --- Anime Card Images (CLS prevention) --- */
+.anime-card-img {
+    aspect-ratio: 160 / 220;
+    width: 100%;
+    height: auto;
+    background-color: #1a1a1a;
+}
+
+/* --- Grid Layout --- */
 .parent {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -74,5 +163,23 @@
 
     .responsive-heading {
         font-size: 1.5rem;
+    }
+}
+
+/* --- Prefers Reduced Motion (Accessibility) --- */
+@media (prefers-reduced-motion: reduce) {
+    .cta-primary {
+        animation: none;
+    }
+
+    .cta-primary:hover,
+    .cta-secondary:hover {
+        transform: none;
+    }
+
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
